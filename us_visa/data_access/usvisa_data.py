@@ -3,7 +3,7 @@ from us_visa.constants import DATABASE_NAME
 from us_visa.exception import USvisaException
 import pandas as pd
 import sys
-from typing import Optional
+from typing import Optional  
 import numpy as np
 
 

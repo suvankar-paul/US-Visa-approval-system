@@ -20,7 +20,7 @@ class DataIngestion:
         try:
             self.data_ingestion_config = data_ingestion_config
         except Exception as e:
-            raise USvisaException(e,sys)
+            raise USvisaException(e,sys)  
         
 
     
@@ -104,6 +104,18 @@ class DataIngestion:
 
             data_ingestion_artifact = DataIngestionArtifact(trained_file_path=self.data_ingestion_config.training_file_path,
             test_file_path=self.data_ingestion_config.testing_file_path)
+
+            """Without returning the artifact:
+
+                The next stage will NOT know:
+
+                where the training file is
+
+                where the testing file is
+
+                whether ingestion succeeded
+
+                what paths to read"""
             
             logging.info(f"Data ingestion artifact: {data_ingestion_artifact}")
             return data_ingestion_artifact

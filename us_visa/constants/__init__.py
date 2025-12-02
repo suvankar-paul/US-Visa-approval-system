@@ -8,7 +8,7 @@ MONGODB_URL_KEY = "MONGODB_URL"
 
 PIPELINE_NAME: str = "us_visa"
 ARTIFACTS_DIR: str = "artifacts" 
-MODEL_FILE_NAME = "model.pkl"
+MODEL_FILE_NAME = "model.pkl"  
 
 
 FILE_NAME: str = "usvisa.csv"
